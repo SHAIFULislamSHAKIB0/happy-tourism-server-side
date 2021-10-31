@@ -66,7 +66,7 @@ async function run() {
             res.json(result)
         })
 
-        // DELETE SINGLE API places
+        // DELETE SINGLE API PLACES
         app.delete('/places/:id', async (req, res) => {
             const id = req.params.id;
             const query = { _id: ObjectId(id) }
@@ -75,7 +75,7 @@ async function run() {
             res.json(result)
         })
 
-        // DELETE SINGLE API order
+        // DELETE SINGLE API ORDER
 
         app.delete('/orders/:id', async (req, res) => {
             const id = req.params.id;
