@@ -25,14 +25,14 @@ async function run() {
         const servicesCollection = database.collection("places")
         const ordersCollection = database.collection("orders")
 
-        // Get places API
+        // GET PLACES API
         app.get('/places', async (req, res) => {
             const cursor = servicesCollection.find({});
             const myPlaces = await cursor.toArray();
             res.send(myPlaces);
         })
 
-        // Get Orders Api
+        // GET ORDERS API
         app.get('/orders', async (req, res) => {
             const cursor = ordersCollection.find({});
             const myOrders = await cursor.toArray();
